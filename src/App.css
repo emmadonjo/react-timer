@@ -1,0 +1,116 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  background-color: #222;
+  color: #fff;
+  position: relative;
+}
+
+.container{
+  position: absolute;
+  left: 50%;
+  top:-50%;
+  transform: translate(-50%, 50%);
+  box-shadow: 0px 0px 5px #888;
+  border-radius: 10px;
+  width: 480px;
+  background-color: rgb(31, 29, 29);
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+@media only screen and (max-width:480px){
+  .container{
+    width: 95%;
+  }
+}
+
+.container h1{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.spin{
+  animation-name: spin;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin{
+  100%{
+    transform: rotate(-360deg);
+  }
+}
+
+.timer-wrapper{
+  background-color: #111111;
+  border: 1px solid greenyellow;
+  border-radius: 50%;
+  height: 240px;
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.timer{
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;  
+  color: #000;
+}
+
+.timer div{
+    background-color: greenyellow;
+    width: 40%;
+}
+
+small{
+  font-size: 0.8rem;
+  display: block;
+}
+
+
+.controls button{
+  display: inline-block;
+  padding:10px 20px;
+  border:none;
+  border-radius: 5px;
+  margin: 10px;
+  color: #fff;
+}
+
+.controls button:hover{
+ opacity: 0.8;
+ cursor: pointer;
+}
+
+button:first-child{
+  background-color: green;
+}
+
+button:nth-child(2){
+  background-color: greenyellow;
+  color: #000;
+}
+
+button:last-child{
+  background-color: red;
+}
