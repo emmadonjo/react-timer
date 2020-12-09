@@ -95,10 +95,10 @@ class Counter extends React.Component{
           <div className="timer-wrapper">
             <div className='timer'>
               <div>
-                {seconds % 60}
-                
+                <span title='seconds'>
+                  {seconds % 60}
+                </span>                
                   <small>Seconds</small>
-              
               </div>
               <div>
                 {minutes}
